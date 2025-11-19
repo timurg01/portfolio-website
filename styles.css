@@ -1,4 +1,39 @@
-h1 {
-  font-size: 20rem;
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
   font-family: "Inter", sans-serif;
+}
+
+body {
+  line-height: 1.5;
+}
+
+.hero {
+  font-size: 5rem;
+}
+
+header {
+  font-size: 2rem;
+  padding-top: 5%;
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+  width: 100vw;
+  justify-content: flex-end;
+  gap: 2rem;
+  padding-right: 2rem;
+}
+
+.header-logo {
+  margin-right: auto;
+  padding-left: 2rem;
+  font-size: 2em;
+}
+
+.nav-btn {
+  padding-top: 0.7em;
 }
