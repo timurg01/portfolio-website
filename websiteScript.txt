@@ -1,0 +1,62 @@
+THIS IS THE TEXT I WANT TO ADD TO MY PORTFOLIO WEBSITE:
+
+Section Hero
+    Timur Gafitulin
+
+    A Front End Developer with a passion to help businesses upgrade their online presence.
+Section About Me
+    About Me
+
+    Hello! I’m Timur, a passionate front-end developer dedicated to creating beautiful and user-friendly web applications. I love transforming complex ideas into effortless navigation using HTML, CSS, and JavaScript.
+
+    I believe that a great user experience combines creativity with functionality, and I strive to deliver both in every project.
+
+    If you're looking for a developer to bring your vision to life, let’s connect!
+
+    Contact
+
+    My Skills
+
+    HTML, CSS, JavaScript, React, SquareSpace, Wordpress, Github, GIT
+Section Projects
+    Projects
+
+    I am proud to showcase a selection of my recent projects that highlight my skills in front-end development.
+
+    [Project Title 1]
+    Description:
+    [Brief overview of the project, what it accomplishes, and the technologies used. For example: “A responsive portfolio website showcasing my work, built with HTML, CSS, and JavaScript.”]
+
+    Technologies:
+
+    HTML
+    CSS
+    JavaScript
+    Live Demo:
+    [Link to the live demo or website]
+
+    GitHub Repository:
+    [Link to the GitHub repository]
+    etc...
+
+Section Testimonials
+    Testimonials
+
+    Hear from people that I have worked with.
+
+    Picture
+    Quote
+    Name
+    Who he is 
+    x2
+Section Contact
+
+    Contact
+
+    Interested in working together? 
+    Send me an email or fill out the form below!
+
+    GitHub
+    email
+    linkedin
+    Instagram
