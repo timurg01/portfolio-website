@@ -19,7 +19,7 @@ header {
   padding-top: 5%;
 }
 
-ul {
+header ul {
   list-style-type: none;
   display: flex;
   width: 100vw;
