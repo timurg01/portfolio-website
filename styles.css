@@ -37,3 +37,13 @@ header ul {
 .nav-btn {
   padding-top: 0.7em;
 }
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color: gray;
+  
+}
