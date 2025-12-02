@@ -51,9 +51,64 @@ a:hover {
   width: 100vw;
   justify-content: baseline;
   padding-top: 10rem;
+  font-size: 2rem;
 }
 
 .hero--header {
   margin: 5% 0 0;
-  font-size: 10rem;
+  font-size: 8rem;
+}
+
+.about-me {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 20% 80%;
+  width: 100vw;
+  height: 100vh;
+  background-color: #e3fdfd;
+}
+
+.about--me-heading {
+  grid-column: 1 / 3;
+  justify-self: center;
+  align-self: center;
+  font-size: 3rem;
+}
+
+.about--me-summary {
+  max-width: 40ch;
+  justify-self: end;
+  font-size: 1.7rem;
+  margin-right: 10%;
+}
+
+.about--me-summary > button {
+  font-size: 1.7rem;
+  padding: 0.5rem 1.5rem;
+  border-radius: 5%;
+  margin-top: 1rem;
+  background-color: #71c9ce;
+}
+
+.about--me-skills {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25%, 1fr));
+  grid-auto-rows: 10%;
+  width: 50%;
+  column-gap: 5%;
+  row-gap: 2rem;
+}
+
+.skill-header {
+  grid-column: 1 / -1;
+  font-size: 1.8rem;
+}
+
+.skill-block {
+  background-color: gray;
+  font-size: 1.5rem;
+  width: fit-content;
+  height: fit-content;
+  padding: 0.3rem 1rem;
+  border-radius: 5%;
 }
