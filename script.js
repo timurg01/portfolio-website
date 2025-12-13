@@ -122,3 +122,27 @@ const prevSlide = function () {
 btnRight.addEventListener("click", nextSlide);
 
 btnLeft.addEventListener("click", prevSlide);
+
+//RESPONSIVE MENU NAV
+
+const menuBar = document.querySelector(".icon");
+const navBtns = document.querySelectorAll(".nav-btn");
+const navList = document.querySelector(".nav");
+let isMenuOpen = false;
+
+const dropDownMenu = function () {
+  if (!isMenuOpen) {
+    navList.classList.add("responsive");
+    navBtns.forEach((btn) => (btn.style.display = "block"));
+    isMenuOpen = true;
+  } else {
+    navList.classList.remove("responsive");
+    navBtns.forEach((btn) => (btn.style.display = "none"));
+    isMenuOpen = false;
+  }
+};
+
+menuBar.addEventListener("click", dropDownMenu);
+navList.addEventListener("click", function (e) {
+  console.log(e.target);
+});
