@@ -24,25 +24,6 @@ allSections.forEach(function (section) {
   section.classList.add("section-hidden");
 });
 
-//STICKY NAVIGATION
-const header = document.querySelector("#hero");
-const nav = document.querySelector(".nav");
-
-const stickyNav = function (entries) {
-  const [entry] = entries;
-
-  if (!entry.isIntersecting) nav.classList.add("sticky");
-  else nav.classList.remove("sticky");
-};
-
-const headerObserver = new IntersectionObserver(stickyNav, {
-  root: null,
-  threshold: 0,
-  rootMargin: "100px",
-});
-
-headerObserver.observe(header);
-
 //CAROUSEL
 const slides = document.querySelectorAll(".testimonial-block");
 const carousel = document.querySelector(".carousel");
@@ -133,16 +114,20 @@ let isMenuOpen = false;
 const dropDownMenu = function () {
   if (!isMenuOpen) {
     navList.classList.add("responsive");
-    navBtns.forEach((btn) => (btn.style.display = "block"));
     isMenuOpen = true;
   } else {
     navList.classList.remove("responsive");
-    navBtns.forEach((btn) => (btn.style.display = "none"));
     isMenuOpen = false;
   }
 };
 
 menuBar.addEventListener("click", dropDownMenu);
 navList.addEventListener("click", function (e) {
-  console.log(e.target);
+  if (isMenuOpen && e.target.className === "nav-link") {
+    navList.classList.remove("responsive");
+    isMenuOpen = false;
+  }
 });
+
+const viewportWidth = window.innerWidth;
+console.log(viewportWidth);

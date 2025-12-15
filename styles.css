@@ -55,11 +55,21 @@ header ul {
 .icon {
   display: none;
   padding-top: 0.7em;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding-right: 5vw;
 }
 
 a {
   text-decoration: none;
   color: black;
+  transition: all ease-in-out 100ms;
+}
+
+.nav-link:hover {
+  color: #2c3e50;
+  font-weight: 600;
 }
 
 .section {
@@ -300,22 +310,6 @@ footer p {
 
 /* Device Breakpoints */
 @media screen and (max-width: 600px) {
-  .responsive {
-    flex-direction: column;
-    gap: 0.5rem;
-    padding-bottom: 0.5rem;
-  }
-  .icon {
-    display: block;
-    position: relative;
-    top: 0;
-    right: 0;
-  }
-
-  .nav-btn {
-    display: none;
-  }
-
   .about-me-container {
     flex-direction: column;
   }
@@ -382,6 +376,7 @@ footer p {
   body {
     background-color: blue;
   }
+
   .about-me-container {
     flex-direction: column;
   }
@@ -444,5 +439,23 @@ footer p {
 @media screen and (min-width: 1200px) {
   body {
     background-color: yellow;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .nav li:not(:first-child) {
+    display: none;
+  }
+  .icon {
+    display: block;
+  }
+  .responsive {
+    flex-direction: column;
+    gap: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .responsive li:not(:first-child) {
+    display: block;
   }
 }
