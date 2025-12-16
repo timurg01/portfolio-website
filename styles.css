@@ -214,15 +214,17 @@ a {
 
 .testimonials {
   text-align: center;
-  width: 40vw;
-  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
 }
 
 .carousel {
   position: relative;
   top: 5rem;
-  height: 28rem;
-  padding: 0 1rem;
+  height: 35rem;
+  width: 100%;
 }
 
 .testimonial-block {
@@ -233,6 +235,7 @@ a {
   align-items: center;
   top: 0;
   transition: transform 1s;
+  align-self: center;
 }
 
 blockquote {
@@ -321,10 +324,6 @@ footer p {
 
 /* Device Breakpoints */
 @media screen and (min-width: 320px) and (max-width: 480px) {
-  body {
-    background-color: orange;
-  }
-
   #hero {
     padding: 5rem 1.5rem;
   }
@@ -361,13 +360,12 @@ footer p {
     padding: 0 1rem;
   }
 
-  .project-body-entry {
-    grid-template-columns: 1fr;
+  blockquote {
+    width: 35ch;
   }
 
-  .testimonial-block {
-    width: 350px;
-    height: 350px;
+  .project-body-entry {
+    grid-template-columns: 1fr;
   }
 
   .carousel--btn-left {
@@ -398,13 +396,7 @@ footer p {
   }
 }
 
-@media screen and (min-width: 481px) and (max-width: 600px) {
-  body {
-    background-color: skyblue;
-  }
-}
-
-@media screen and (min-width: 601px) and (max-width: 768px) {
+@media screen and (min-width: 481px) and (max-width: 768px) {
   .about-me-container {
     flex-direction: column;
   }
@@ -435,6 +427,10 @@ footer p {
     width: 100%;
   }
 
+  blockquote {
+    width: 40ch;
+  }
+
   .carousel--btn-left {
     transform: translate(-8rem, -5rem);
   }
@@ -456,10 +452,6 @@ footer p {
 
   .contact-me--text {
     text-align: center;
-  }
-
-  body {
-    background-color: blue;
   }
 }
 
