@@ -1,9 +1,5 @@
 "use strict";
 
-//TESTIMONIAL CAROUSEL
-const testimonialParentEl = document.querySelector(".carousel");
-const testimonialBlock = document.querySelectorAll(".testimonial-block");
-
 //REVEAL ELEMENTS ON SCROLL
 const allSections = document.querySelectorAll(".section");
 
@@ -131,3 +127,26 @@ navList.addEventListener("click", function (e) {
 
 const viewportWidth = window.innerWidth;
 console.log(viewportWidth);
+
+//CHANGE NAVBAR COLOUR ON SCROLL 
+const heroSection = document.getElementById('hero')
+const stickyNav = document.querySelector('.sticky')
+const navText = document.querySelectorAll('a')
+
+const changeNavColour = function(entry) {
+  if (!entry[0].isIntersecting) {
+    stickyNav.style.backgroundColor = "var(--header-footer-colour)"
+    navText.forEach(txt => txt.style.color = "var(--primary-colour)")
+  } else {
+    stickyNav.style.backgroundColor = ""
+    navText.forEach(txt => txt.style.color = "black")
+  }
+}
+
+const options = {
+    root: null,
+    threshold: 0.1,
+  };
+
+const observer = new IntersectionObserver(changeNavColour, options);
+observer.observe(heroSection)
