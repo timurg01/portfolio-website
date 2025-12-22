@@ -150,3 +150,9 @@ const options = {
 
 const observer = new IntersectionObserver(changeNavColour, options);
 observer.observe(heroSection)
+
+////AUTOMATIC CHANGING COPYRIGHT DATE/////
+const dateElement = document.querySelector('.date')
+const currentYear = new Date().getFullYear()
+
+dateElement.textContent = currentYear;
