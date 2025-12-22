@@ -131,15 +131,15 @@ console.log(viewportWidth);
 //CHANGE NAVBAR COLOUR ON SCROLL 
 const heroSection = document.getElementById('hero')
 const stickyNav = document.querySelector('.sticky')
-const navText = document.querySelectorAll('a')
+const navText = document.querySelectorAll('.nav-link')
 
 const changeNavColour = function(entry) {
   if (!entry[0].isIntersecting) {
-    stickyNav.style.backgroundColor = "var(--header-footer-colour)"
-    navText.forEach(txt => txt.style.color = "var(--primary-colour)")
+    stickyNav.classList.add('nav-scrolled')
+    navText.forEach(txt => txt.classList.add("nav-scrolled"))
   } else {
-    stickyNav.style.backgroundColor = ""
-    navText.forEach(txt => txt.style.color = "black")
+    stickyNav.classList.remove('nav-scrolled')
+    navText.forEach(txt => txt.classList.remove("nav-scrolled"))
   }
 }
 

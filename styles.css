@@ -78,6 +78,11 @@ a {
   transition: all ease-in-out 100ms;
 }
 
+.nav-scrolled {
+  background-color: var(--header-footer-colour);
+  color: var(--primary-colour);
+}
+
 .nav-link:hover {
   color: var(--secondary-color);
   transform: scale(1.1);
