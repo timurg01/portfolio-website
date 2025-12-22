@@ -489,8 +489,8 @@ footer p {
 }
 
 @media screen and (min-width: 768px) {
-  body {
-    background-color: purple;
+  .about--me-summary {
+    width: 550px;
   }
 
   .project-body-entry {
@@ -530,14 +530,18 @@ footer p {
 }
 
 @media screen and (min-width: 992px) {
-  body {
-    background-color: green;
+  .contact > iframe {
+    padding: 0 3rem;
   }
 }
 
 @media screen and (min-width: 1200px) {
-  body {
-    background-color: yellow;
+  .contact > iframe {
+    padding: 0 4rem;
+  }
+
+  .about--me-summary {
+    max-width: 40ch;
   }
 }
 
