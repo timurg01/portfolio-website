@@ -234,6 +234,10 @@ a {
   margin-top: 0.5rem;
 }
 
+.project-description-blurb {
+  font-weight: 300;
+}
+
 .project-image {
   justify-self: stretch;
 }
