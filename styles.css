@@ -105,8 +105,7 @@ a {
   font-size: 1.5rem;
   text-align: center;
   width: 100%; 
-  background-image: url("./assets/imgs/sky-img.jpg");
-  background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url('./assets/imgs/sky-img.jpg');
+  background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url('./assets/imgs/sky-img-v2.jpg');
   background-size: cover;
   background-attachment: fixed;
 }
@@ -530,11 +529,46 @@ footer p {
   .project-image {
     width: 400px;
     padding-left: 20px;
+    position: relative;
   }
 
   .project-image > img {
     width: 375px;
+    object-fit: cover;
+    transition: .5s ease;
   }
+
+  .project-image:hover img {
+    opacity: 0.3;
+  }
+
+  .project-image:hover .hover-text {
+    opacity: 1;
+  }
+
+  .hover-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 1rem;
+    opacity: 0;
+    transition: .5s ease;
+    border: 2px solid black;
+    cursor: pointer;
+    border-radius: 5%;
+    padding: 1rem 2rem;
+    background-color: var(--button-color);
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%)
+  }
+
+  .hover-text:hover {
+    background-color: var(--secondary-color);
+  }
+
+  .hover-text > img {
+    height: 1rem;
+  };
 
   .project-description {
     width: 30ch;
