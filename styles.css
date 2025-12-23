@@ -12,12 +12,12 @@ html {
 }
 
 :root {
-  --header-footer-colour: #1E3A5F;
-  --main-bg-colour: #F8F9FA;
-  --button-color: #FF6F61;
-  --secondary-bg-color: #D1D1D1;
-  --secondary-color: #2ECC71;
-  --primary-colour: #FAF9F6;
+  --header-footer-colour: #1e3a5f;
+  --main-bg-colour: #f8f9fa;
+  --button-color: #ff6f61;
+  --secondary-bg-color: #d1d1d1;
+  --secondary-color: #2ecc71;
+  --primary-colour: #faf9f6;
 }
 
 body {
@@ -104,8 +104,12 @@ a {
   padding: 15rem 2.5rem 5rem;
   font-size: 1.5rem;
   text-align: center;
-  width: 100%; 
-  background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url('./assets/imgs/sky-img-v2.jpg');
+  width: 100%;
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.8),
+      rgba(255, 255, 255, 0.8)
+    ),
+    url("./assets/imgs/sky-img-v2.jpg");
   background-size: cover;
   background-attachment: fixed;
 }
@@ -236,6 +240,40 @@ a {
 
 .project-image > img {
   height: 400px;
+  object-fit: cover;
+  transition: 0.5s ease;
+}
+
+.project-image:hover img {
+  opacity: 0.3;
+}
+
+.project-image:hover .hover-text {
+  opacity: 1;
+}
+
+.hover-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 1rem;
+  opacity: 0;
+  transition: 0.5s ease;
+  border: 2px solid black;
+  cursor: pointer;
+  border-radius: 5%;
+  padding: 1rem 2rem;
+  background-color: var(--button-color);
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+.hover-text:hover {
+  background-color: var(--secondary-color);
+}
+
+.hover-text > img {
+  height: 1rem;
 }
 
 /* TESTIMONIAL START */
@@ -435,9 +473,9 @@ footer p {
 
 @media screen and (min-width: 481px) and (max-width: 768px) {
   #hero {
-    padding: 8rem 2.5rem 5rem
+    padding: 8rem 2.5rem 5rem;
   }
-  
+
   .about-me-container {
     flex-direction: column;
   }
@@ -535,10 +573,10 @@ footer p {
   .project-image > img {
     width: 375px;
     object-fit: cover;
-    transition: .5s ease;
+    transition: 0.5s ease;
   }
 
-  .project-image:hover img {
+  /* .project-image:hover img {
     opacity: 0.3;
   }
 
@@ -552,14 +590,14 @@ footer p {
     left: 50%;
     font-size: 1rem;
     opacity: 0;
-    transition: .5s ease;
+    transition: 0.5s ease;
     border: 2px solid black;
     cursor: pointer;
     border-radius: 5%;
     padding: 1rem 2rem;
     background-color: var(--button-color);
     transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%)
+    -ms-transform: translate(-50%, -50%);
   }
 
   .hover-text:hover {
@@ -568,7 +606,7 @@ footer p {
 
   .hover-text > img {
     height: 1rem;
-  };
+  } */
 
   .project-description {
     width: 30ch;
@@ -579,13 +617,13 @@ footer p {
     font-size: 1.2rem;
   }
 
- .carousel--btn-left {
-  transform: translate(-15rem, -10rem);
-}
+  .carousel--btn-left {
+    transform: translate(-15rem, -10rem);
+  }
 
-.carousel--btn-right {
-  transform: translate(15rem, -10rem);
-}
+  .carousel--btn-right {
+    transform: translate(15rem, -10rem);
+  }
 
   .contact {
     flex-direction: column;
@@ -621,7 +659,7 @@ footer p {
     flex-direction: column;
     gap: 0.5rem;
     padding-bottom: 0.5rem;
-    background-color: var(--secondary-bg-color);
+    background-color: var(--header-footer-colour);
   }
 
   .responsive li:not(:first-child) {
